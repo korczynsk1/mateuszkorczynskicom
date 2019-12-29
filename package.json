@@ -1,0 +1,12 @@
+{
+    "name": "mateuszkorczynskicom",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "dependencies": {
+        "apollo-server": "^2.0.0-rc.5",
+        "graphql": "^0.13.2",
+        "nodemon": "^1.17.5"
+    }
+}
