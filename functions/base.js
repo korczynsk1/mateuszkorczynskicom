@@ -1,5 +1,5 @@
-const { ApolloServer, gql } = require('apollo-server');
- 
+const { ApolloServer, gql } = require("apollo-server-lambda");
+
 // The GraphQL schema
 const typeDefs = gql`
   type Query {
@@ -7,19 +7,19 @@ const typeDefs = gql`
     hello: String
   }
 `;
- 
+
 // A map of functions which return data for the schema.
 const resolvers = {
   Query: {
     hello: () => 'world',
   },
 };
- 
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  playground: true,
+  introspection: true
 });
- 
-server.listen().then(({ url }) => {
-  console.log(`🚀 Server ready at ${url}`);
-});
+
+exports.handler = server.createHandler();

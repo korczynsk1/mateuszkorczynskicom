@@ -1,12 +1,18 @@
 {
-    "name": "mateuszkorczynskicom",
-    "version": "1.0.0",
-    "scripts": {
-        "start": "nodemon index.js"
-    },
-    "dependencies": {
-        "apollo-server": "^2.0.0-rc.5",
-        "graphql": "^0.13.2",
-        "nodemon": "^1.17.5"
-    }
+  "name": "serverless-graphql-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"Preparing server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "mateuszkorczynski.com",
+  "dependencies": {
+    "apollo-server-lambda": "^2.9.5",
+    "dotenv": "^8.1.0",
+    "node-fetch": "^2.6.0"
+  }
 }
